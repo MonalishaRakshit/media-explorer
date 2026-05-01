@@ -1,12 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { addCollection } from "../redux/features/CollectionSlice";
+import { addCollection, addedToast } from "../redux/features/CollectionSlice";
 
 const ResultCard = ({ item }) => {
       const dispatch = useDispatch()
 
       const addToCollection = (item) => {
         dispatch(addCollection(item))
+        dispatch(addedToast())
       }
   
 
