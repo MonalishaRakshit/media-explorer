@@ -34,6 +34,7 @@ const ResultGrid = () => {
             title: item.alt_description,
             thumbnail: item.urls.small,
             src: item.urls.full,
+            url: item.links.html,
           }));
         }
 
@@ -46,19 +47,22 @@ const ResultGrid = () => {
             title: item.user.name,
             thumbnail: item.image,
             src: item.video_files[0].link,
+            url: item.url,
           }));
         }
 
         if (activeTab == "gif") {
           const response = await fetchGIF(query);
+
           data = response.data.map((item) => ({
             id: item.id,
             title: item.title,
             type: "gif",
             thumbnail: item.images.fixed_width_small.url,
             src: item.images.original.url,
+            url: item.url,
           }));
-          // console.log(response.data[0]);
+          //console.log(response.data[0]);
         }
         dispatch(setResults(data));
       } catch (err) {
@@ -67,7 +71,7 @@ const ResultGrid = () => {
       console.log(data);
     };
     getData();
-  }, [query, activeTab]);
+  }, [query, activeTab, dispatch]);
 
   if (error) return <h1>Error</h1>;
   if (loading) return <h1>Loading...</h1>;

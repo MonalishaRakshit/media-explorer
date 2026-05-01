@@ -39,16 +39,18 @@
 // export default App;
 
 //import React from "react";
-import ResultGraid from "./components/ResultGraid";
-import SearchBar from "./components/SearchBar";
-import Tabs from "./components/Tabs";
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <div className="min-h-screen text-white w-full bg-gray-950">
-      <SearchBar />
-      <Tabs />
-      <ResultGraid />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/collection" element={<CollectionPage />} />
+      </Routes>
     </div>
   );
 };
