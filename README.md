@@ -1,16 +1,69 @@
-# React + Vite
+# 🎬 Media Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern media discovery web application built with **React.js** and **Redux Toolkit** that allows users to search and explore **photos, videos, and GIFs** using external APIs.
 
-Currently, two official plugins are available:
+The application provides a clean and responsive interface with features such as media search, category-based browsing, collections, and centralized state management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔎 Search for photos, videos, and GIFs
+- 🖼️ Browse different types of media
+- ❤️ Save media to your collection
+- 📂 Manage saved media through a collection page
+- ⚡ Fast and responsive React UI
+- 🔄 Global state management using Redux Toolkit
+- 🌐 Fetch media from external APIs
+- 📱 Responsive design for different screen sizes
+- 🧭 Navigation between different sections of the application
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+### Frontend
+- **React.js**
+- **JavaScript**
+- **HTML5**
+- **CSS3**
+
+### State Management
+- **Redux Toolkit**
+- **React Redux**
+
+### Build Tool
+- **Vite**
+
+### APIs
+- External media APIs for fetching photos, videos, and GIFs
+
+### Development Tools
+- Git
+- GitHub
+- VS Code
+- ESLint
+
+---
+
+## 📂 Project Structure
+
+```text
+media-explorer/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── redux/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
